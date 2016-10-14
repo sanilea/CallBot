@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    image: mongo:3.3
+  web:
+    build: .
+    command: bundle exec rails s -b 0.0.0.0
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "4000:3000"
+    depends_on:
+      - db

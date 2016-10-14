@@ -10,6 +10,8 @@ Build project docker image
 
 `sudo docker-compose build`
 
+Add a secret key to *config/secrets.yml* (see .example).
+
 Start project server et retrieve MongoDB image if this is the first run on this machine.
 
 `sudo docker-compose up`
